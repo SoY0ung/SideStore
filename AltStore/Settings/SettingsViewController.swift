@@ -507,7 +507,30 @@ extension SettingsViewController
                 }
                 tableView.deselectRow(at: indexPath, animated: true)
             case .resetPair:
-                tableView.deselectRow(at: indexPath, animated: true)
+                let filename = "ALTPairingFile.mobiledevicepairing"
+                let fm = FileManager.default
+                let documentsPath = fm.documentsDirectory.appendingPathComponent("/\(filename)")
+
+                let alert = UIAlertController(
+                    title: NSLocalizedString("Are you sure to reset the pairing file?", comment: ""),
+                    message: NSLocalizedString("You can reset the pairing file when you cannot sideload apps or enable JIT. App will crash to apply changes.", comment: ""),
+                    preferredStyle: UIAlertController.Style.actionSheet)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Delete and Reset", comment: ""), style: .destructive)
+                { _ in
+                    if fm.fileExists(atPath: documentsPath.path), let contents = try? String(contentsOf: documentsPath), !contents.isEmpty {
+                        try? fm.removeItem(atPath: documentsPath.path)
+                        NSLog("Pair File Reseted")
+                    }
+                    self.tableView.deselectRow(at: indexPath, animated: true)
+                    abort()
+                })
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertAction.Style.cancel)
+                 {_ in
+                    self.tableView.deselectRow(at: indexPath, animated: true)
+                })
+                alert.popoverPresentationController?.sourceView = self.tableView
+                alert.popoverPresentationController?.sourceRect = self.tableView.rectForRow(at: indexPath)
+                self.present(alert, animated: true)
             case .cleanCache:
                 tableView.deselectRow(at: indexPath, animated: true)
             case .advancedSettings:
