@@ -40,7 +40,7 @@ SideStore is fairly straightforward to compile and run if you're already an iOS 
 
 1. Clone the repository 
 	```
-	git clone https://github.com/SideStore/SideStore.git --recurse-submodules
+	git clone https://github.com/SoY0ung/SideStore.git --recurse-submodules
 	```
 2. After installing Rustup, run `rustup target add aarch64-apple-ios`
 12. Within the Dependencies/em_proxy and Dependencies/minimuxer directories, run `cargo build --release --target aarch64-apple-ios`
