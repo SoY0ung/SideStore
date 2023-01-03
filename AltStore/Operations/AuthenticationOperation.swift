@@ -593,7 +593,12 @@ private extension AuthenticationOperation
     
     func registerCurrentDevice(for team: ALTTeam, session: ALTAppleAPISession, completionHandler: @escaping (Result<ALTDevice, Error>) -> Void)
     {
-        guard let udid = Bundle.main.object(forInfoDictionaryKey: Bundle.Info.deviceID) as? String else {
+        // Always Load UDID from Pairing File
+        let filename = "ALTPairingFile.mobiledevicepairing"
+        let fileURL = FileManager.default.documentsDirectory.appendingPathComponent("/\(filename)")
+        let data = try! Data(contentsOf: fileURL)
+        let pairingPlist = try? PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil) as? [String: Any]
+        guard let udid = pairingPlist?["UDID"] as? String else {
             return completionHandler(.failure(OperationError.unknownUDID))
         }
         

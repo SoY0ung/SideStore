@@ -131,6 +131,25 @@ class LaunchViewController: RSTLaunchViewController, UIDocumentPickerDelegate
             // Start minimuxer now that we have a file
             start_minimuxer_threads(pairing_string!)
             
+            //Finish Work and Jump to TabBarController
+            AppManager.shared.update()
+            AppManager.shared.updatePatronsIfNeeded()
+            PatreonAPI.shared.refreshPatreonAccount()
+            
+            // Add view controller as child (rather than presenting modally)
+            // so tint adjustment + card presentations works correctly.
+            self.destinationViewController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+            self.destinationViewController.view.alpha = 0.0
+            self.addChild(self.destinationViewController)
+            self.view.addSubview(self.destinationViewController.view, pinningEdgesWith: .zero)
+            self.destinationViewController.didMove(toParent: self)
+            
+            UIView.animate(withDuration: 0.2) {
+                self.destinationViewController.view.alpha = 1.0
+            }
+            
+            self.didFinishLaunching = true
+            
         } catch {
             displayError("Unable to read pairing file")
         }
@@ -198,6 +217,11 @@ extension LaunchViewController
         super.finishLaunching()
         
         guard !self.didFinishLaunching else { return }
+        
+        guard let _ = fetchPairingFile() else {
+            displayError("[FinishLaunching] Device pairing file not found.")
+            return
+        }
         
         AppManager.shared.update()
         AppManager.shared.updatePatronsIfNeeded()        

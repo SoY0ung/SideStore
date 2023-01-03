@@ -41,6 +41,18 @@ class TabBarController: UITabBarController
         
         _viewDidAppear = true
         
+        // Show Toast View With UDID
+        let filename = "ALTPairingFile.mobiledevicepairing"
+        let fileURL = FileManager.default.documentsDirectory.appendingPathComponent("/\(filename)")
+        let data = try! Data(contentsOf: fileURL)
+        
+        let pairingPlist = try? PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil) as? [String: Any]
+        let udid = (pairingPlist?["UDID"] as? String) ?? "Not Found"
+        let toastView = ToastView(text: "Pairing File Loaded", detailText: "UDID: \(udid)")
+        toastView.textLabel.textAlignment = .center
+        toastView.preferredDuration = 3.0
+        toastView.show(in: self)
+        
         if let (identifier, sender) = self.initialSegue
         {
             self.initialSegue = nil

@@ -172,7 +172,12 @@ private extension ResignAppOperation
 
                 if app.isAltStoreApp
                 {
-                    guard let udid = Bundle.main.object(forInfoDictionaryKey: Bundle.Info.deviceID) as? String else { throw OperationError.unknownUDID }
+                    // Always Load UDID from Pairing File
+                    let filename = "ALTPairingFile.mobiledevicepairing"
+                    let fileURL = FileManager.default.documentsDirectory.appendingPathComponent("/\(filename)")
+                    let data = try! Data(contentsOf: fileURL)
+                    let pairingPlist = try? PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil) as? [String: Any]
+                    guard let udid = pairingPlist?["UDID"] as? String else { throw OperationError.unknownUDID }
                     guard let pairingFileString = Bundle.main.object(forInfoDictionaryKey: Bundle.Info.devicePairingString) as? String else { throw OperationError.unknownUDID }                    
                     additionalValues[Bundle.Info.devicePairingString] = pairingFileString
                     additionalValues[Bundle.Info.deviceID] = udid
