@@ -33,4 +33,24 @@ extension FileManager
         
         return total
     }
+    
+    func directoryDelete(at directoryURL: URL) -> Bool
+    {
+        guard let enumerator = FileManager.default.enumerator(at: directoryURL, includingPropertiesForKeys: [.fileSizeKey]) else { return false }
+        
+        for case let fileURL as URL in enumerator
+        {
+            if fileURL.path.contains("com.SideStore.SideStore") || fileURL.path.contains("Inbox")  { continue }
+            do
+            {
+                try FileManager.default.removeItem(at: fileURL)
+            }
+            catch
+            {
+                print("Failed to delete file: \(fileURL).", error)
+            }
+        }
+        
+        return true
+    }
 }

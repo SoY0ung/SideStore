@@ -51,8 +51,8 @@ class TabBarController: UITabBarController
         let toastView = ToastView(text: "Device UDID", detailText: udid)
         toastView.textLabel.textAlignment = .center
         toastView.detailTextLabel.textAlignment = .center
-        toastView.show(in: self)
-        
+        toastView.show(in: self.view, duration: 3.0)
+        toastView.frame.origin.y = UIScreen.main.bounds.height - toastView.frame.height - 100
         if let (identifier, sender) = self.initialSegue
         {
             self.initialSegue = nil

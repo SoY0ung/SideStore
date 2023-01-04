@@ -74,6 +74,8 @@ class SettingsViewController: UITableViewController
     
     @IBOutlet private var backgroundRefreshSwitch: UISwitch!
     
+    @IBOutlet private var cacheSizeLabel: UILabel!
+    
     @IBOutlet private var versionLabel: UILabel!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -148,6 +150,16 @@ private extension SettingsViewController
         }
         
         self.backgroundRefreshSwitch.isOn = UserDefaults.standard.isBackgroundRefreshEnabled
+        
+        let fm = FileManager.default
+        var cacheByteSize :Int = 0
+        cacheByteSize += fm.directorySize(at: fm.temporaryDirectory) ?? 0
+        let cacheMegaByteSize :Double = Double(cacheByteSize)/1024.0/1024.0
+        if cacheMegaByteSize > 1024 {
+            self.cacheSizeLabel.text = String(format: "%.2lfGB", cacheMegaByteSize/1024.0)
+        } else {
+            self.cacheSizeLabel.text = String(format: "%.1lfMB", cacheMegaByteSize)
+        }
         
         if self.isViewLoaded
         {
@@ -532,7 +544,22 @@ extension SettingsViewController
                 alert.popoverPresentationController?.sourceRect = self.tableView.rectForRow(at: indexPath)
                 self.present(alert, animated: true)
             case .cleanCache:
-                tableView.deselectRow(at: indexPath, animated: true)
+                let fm = FileManager.default
+                let cacheURL = fm.temporaryDirectory
+                if fm.directoryDelete(at: cacheURL) {
+                    let alert = UIAlertController(title: NSLocalizedString("Cache Cleared", comment: ""), message: nil, preferredStyle: .alert)
+                    self.present(alert, animated: true){
+                        self.dismiss(animated: true)
+                    }
+                } else {
+                    let alert = UIAlertController(title: NSLocalizedString("Cache Cleanup Failed", comment: ""), message: nil, preferredStyle: .alert)
+                    self.present(alert, animated: true){
+                        self.dismiss(animated: true)
+                    }
+                }
+                self.cacheSizeLabel.text = NSLocalizedString("Cleared", comment: "")
+                self.update()
+                self.tableView.deselectRow(at: indexPath, animated: true)
             case .advancedSettings:
                 // Create the URL that deep links to your app's custom settings.
                 if let url = URL(string: UIApplication.openSettingsURLString) {
