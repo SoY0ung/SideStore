@@ -1,0 +1,96 @@
+
+/* Class = "UINavigationItem"; title = "App IDs"; ObjectID = "3Co-uv-Fhb"; */
+"3Co-uv-Fhb.title" = "App ID";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4fh-lO-rAn"; */
+"4fh-lO-rAn.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "My Apps"; ObjectID = "4gT-9u-k7y"; */
+"4gT-9u-k7y.title" = "我的App";
+
+/* Class = "UITextView"; text = "Test"; ObjectID = "66c-H8-KJx"; */
+"66c-H8-KJx.text" = "Test";
+
+/* Class = "UIBarButtonItem"; title = "Sources"; ObjectID = "6Ul-JW-TMT"; */
+"6Ul-JW-TMT.title" = "软件源";
+
+/* Class = "UILabel"; text = "Version 4.4.2"; ObjectID = "7E0-TV-G4l"; */
+"7E0-TV-G4l.text" = "Version 4.4.2";
+
+/* Class = "UILabel"; text = "App IDs Description"; ObjectID = "83Z-Ih-nOW"; */
+"83Z-Ih-nOW.text" = "App IDs Description";
+
+/* Class = "UILabel"; text = "Classic games in your pocket"; ObjectID = "BsL-O2-UjD"; */
+"BsL-O2-UjD.text" = "Classic games in your pocket";
+
+/* Class = "UILabel"; text = "Delta"; ObjectID = "DTD-1Y-76c"; */
+"DTD-1Y-76c.text" = "Delta";
+
+/* Class = "UILabel"; text = "50.4 MB"; ObjectID = "DgM-bD-bBY"; */
+"DgM-bD-bBY.text" = "50.4 MB";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ErG-8A-uqY"; */
+"ErG-8A-uqY.text" = "Label";
+
+/* Class = "UILabel"; text = "5/10 App IDs"; ObjectID = "LLv-8I-6Of"; */
+"LLv-8I-6Of.text" = "5/10 App IDs";
+
+/* Class = "UIButton"; normalTitle = "View App IDs"; ObjectID = "NHb-0F-cHZ"; */
+"NHb-0F-cHZ.normalTitle" = "App ID使用情况";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "OZm-Le-7oJ"; */
+"OZm-Le-7oJ.title" = "Settings";
+
+/* Class = "UITextView"; text = "Hello Me"; ObjectID = "Pyt-8D-BZA"; */
+"Pyt-8D-BZA.text" = "Hello Me";
+
+/* Class = "UINavigationItem"; title = "Sources"; ObjectID = "QTB-W7-6BG"; */
+"QTB-W7-6BG.title" = "Sources";
+
+/* Class = "UILabel"; text = "Manage sources to control which apps are available to download through SideStore."; ObjectID = "TZv-TM-uJj"; */
+"TZv-TM-uJj.text" = "Manage sources to control which apps are available to download through SideStore.";
+
+/* Class = "UITabBarItem"; title = "Browse"; ObjectID = "Uwh-Bg-Ymq"; */
+"Uwh-Bg-Ymq.title" = "探索";
+
+/* Class = "UILabel"; text = "10 App IDs"; ObjectID = "Zna-7n-kBz"; */
+"Zna-7n-kBz.text" = "10 App IDs";
+
+/* Class = "UINavigationItem"; title = "News"; ObjectID = "ZxL-Ws-lJO"; */
+"ZxL-Ws-lJO.title" = "News";
+
+/* Class = "UICollectionViewController"; title = "Sources"; ObjectID = "cHC-TX-KzQ"; */
+"cHC-TX-KzQ.title" = "软件源";
+
+/* Class = "UILabel"; text = "Permissions"; ObjectID = "dj7-G8-GFv"; */
+"dj7-G8-GFv.text" = "App隐私";
+
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "fVN-ed-uO1"; */
+"fVN-ed-uO1.title" = "News";
+
+/* Class = "UIButton"; normalTitle = "FREE"; ObjectID = "grk-xM-YWA"; */
+"grk-xM-YWA.normalTitle" = "FREE";
+
+/* Class = "UILabel"; text = "What's New"; ObjectID = "obM-TM-y2E"; */
+"obM-TM-y2E.text" = "新功能";
+
+/* Class = "UILabel"; text = "Hello\nWorld"; ObjectID = "pQi-FD-18P"; */
+"pQi-FD-18P.text" = "Hello\nWorld";
+
+/* Class = "UINavigationItem"; title = "Browse"; ObjectID = "pUx-6k-rtr"; */
+"pUx-6k-rtr.title" = "探索";
+
+/* Class = "UINavigationItem"; title = "App"; ObjectID = "sWo-Y8-aF6"; */
+"sWo-Y8-aF6.title" = "App";
+
+/* Class = "UILabel"; text = "2w ago"; ObjectID = "wGD-mS-8fO"; */
+"wGD-mS-8fO.text" = "2w ago";
+
+/* Class = "UICollectionViewController"; title = "App IDs"; ObjectID = "y1A-Nm-mw7"; */
+"y1A-Nm-mw7.title" = "App ID";
+
+/* Class = "UILabel"; text = "No Updates Available"; ObjectID = "z04-yg-x1t"; */
+"z04-yg-x1t.text" = "没有可用的更新";
+
+/* Class = "UINavigationItem"; title = "My Apps"; ObjectID = "zLJ-Cg-ijh"; */
+"zLJ-Cg-ijh.title" = "我的App";

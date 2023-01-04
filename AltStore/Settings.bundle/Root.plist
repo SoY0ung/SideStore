@@ -16,7 +16,7 @@
 			<key>Key</key>
 			<string>customAnisetteURL</string>
 			<key>DefaultValue</key>
-			<string>http://191.101.206.188:6969</string>
+			<string>https://anisette.crystall1ne.software/</string>
 			<key>Titles</key>
 			<array>
 				<string>Macley (US)</string>

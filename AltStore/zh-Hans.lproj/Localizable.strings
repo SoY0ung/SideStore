@@ -1,0 +1,103 @@
+/* 
+  Localizable.strings
+  AltStore
+
+  Created by So Young on 4/1/2023.
+*/
+
+/* LaunchViewController*/
+"Pairing File" = "配对文件";
+"Select the pairing file (*.mobiledevicepairing) for your device. For more information, go to https://github.com/osy/Jitterbug" = "请选择设备配对文件(拓展名为mobiledevicepairing)。将设备连接电脑后用jitterbugpair配对即可生成。详情见https://github.com/osy/Jitterbug";
+
+"Error launching SideStore" = "SideStore启动失败";
+"Choosing a pairing file was cancelled. Please re-open the app and try again." = "没有选择配对文件。请重新打开App。";
+
+
+/* Settings */
+"Are you sure to reset the pairing file?" = "确定要重置配对文件吗？";
+"You can reset the pairing file when you cannot sideload apps or enable JIT. App will crash to apply changes." = "无法安装App或开启JIT时可尝试重置配对文件。你需要重启App。";
+"Delete and Reset" = "删除并重置";
+"Cancel" = "取消";
+"Are you sure you want to sign out?" = "确定要退出登录吗？";
+"You will no longer be able to install or refresh apps once you sign out." = "退出登录后将无法再安装App。";
+"Sign Out" = "退出登录";
+
+"ACCOUNT" = "账户";
+"Sign in with your Apple ID to download apps from SideStore." = "登录Apple ID后可在SideStore中下载安装App";
+"PATREON" = "PATREON众筹";
+"Support the SideStore Team by becoming a patron!" = "赞助支持SideStore团队！";
+"SIGN OUT" = "退出登录";
+"REFRESHING APPS" = "APP刷新（续签）";
+"Enable Background Refresh to automatically refresh apps in the background when connected to Wi-Fi." = "打开后台刷新签名时将自动在Wi-Fi下为App进行续签";
+"CREDITS" = "开发团队";
+"DEBUG" = "开发者选项 (DEBUG)";
+
+"Cannot Send Mail" = "邮件发送失败";
+
+"Cache Cleared" = "缓存清除成功";
+"Cache Cleanup Failed" = "缓存清理失败";
+
+/* My Apps */
+"Expires in" = "剩余";
+"1 day" = "1 天";
+"%@ days" = "%@ 天";
+"Refresh %@" = "刷新 %@";
+"Expires in %@" = "%@ 天后过期";
+"ACTIVATE" = "激活";
+"Failed to refresh 1 app." = "1 个App刷新失败。";
+"Failed to refresh %@ apps." = "%@ 个App刷新失败。";
+"Non-developer Apple IDs are limited to 3 apps and app extensions. Inactive apps don't count towards your total, but cannot be opened until activated." = "一个设备最多可添加3个免费开发者账号的应用。非活跃状态的App不会计入上述限额中，但在激活安装前不能运行。";
+"Non-developer Apple IDs are limited to 3 apps. Inactive apps are backed up and uninstalled so they don't count towards your total, but will be reinstalled with all their data when activated again." = "一个设备最多可添加3个免费开发者账号的应用。非活跃状态的App会在备份后从设备中卸载，因此不会计入上述限额中，你可以随时激活安装使用，非活跃App的数据不会丢失。";
+"What are inactive apps?" = "什么是非活跃状态的App？";
+"Non-developer Apple IDs are limited to 3 active apps and app extensions." = "一个设备最多可添加3个免费开发者账号的应用。";
+"Non-developer Apple IDs are limited to creating 10 App IDs per week." = "免费开发者账号一周最多创建10个App ID。（App拓展也计入App ID数量）";
+"Would you like to remove this app's extensions so they don't count towards your limit?" = "你可以选择移除此App中的拓展来避免达到App ID限额";
+"App Contains Extensions" = "待安装的App包含拓展";
+"Keep App Extensions" = "保留App拓展";
+"Remove App Extensions" = "移除App拓展";
+"%@ App IDs Remaining" = "剩余可用的App ID：%@";
+"1 App ID Remaining" = "剩余可用的App ID：1";
+
+"Installed" = "已安装的App";
+"Active" = "活跃的";
+"Refresh All" = "刷新全部App";
+"Refreshing" = "刷新中";
+"Inactive" = "非活跃的";
+
+"Open" = "打开";
+"Refresh" = "刷新(续签)";
+"Activate" = "激活（活跃）";
+"Deactivate" = "反激活（非活跃）";
+"Remove" = "移除";
+"Enable JIT" = "开启JIT";
+"Back Up" = "备份";
+"Export Backup" = "导出备份";
+"Restore Backup" = "恢复备份";
+"Photos" = "相册";
+"Remove Custom Icon" = "移除自定义图标";
+"Change Icon" = "更改图标";
+
+/* AppIDsViewController */
+"Each app and app extension installed with SideStore must register an App ID with Apple. Apple limits non-developer Apple IDs to 10 App IDs at a time.
+
+**App IDs can't be deleted**, but they do expire after one week. SideStore will automatically renew App IDs for all active apps once they've expired." =
+"使用SideStore安装App或App拓展时需要在Apple服务器注册App ID。免费开发者最多可以同时拥有10个App ID。
+
+**你不能手动删除App ID**，但每个App ID会在7天后自动失效。SideStore会自动续租处于活跃状态的App的App ID。
+";
+
+
+/* OperationError */
+"Unable to connect to the device, make sure Wireguard is enabled and you're connected to WiFi" = "设备无法连接，请确认你正在使用Wi-Fi并打开了Wireguard。";
+
+/* AuthenticationViewController */
+"Failed to Log In" = "登录失败";
+
+/* AuthenticationOperation */
+"Please enter the 6-digit verification code that was sent to your Apple devices." = "一条包含验证码的信息已发送至你运行iOS 10、macOS Sierra 或更高版本的其他设备。输入6位数验证码以维续。";
+
+/* TabBarController */
+"Found UDID" = "当前UDID";
+
+/* SourcesViewController */
+"Sources control what apps are available to download through SideStore." = "软件源是各种软件的集合。SideStore使用软件源来展示其中可用的App及更新";

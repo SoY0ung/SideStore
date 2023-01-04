@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wKh-xq-NuP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wKh-xq-NuP">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -883,7 +883,7 @@ World</string>
                     <navigationItem key="navigationItem" title="App IDs" id="3Co-uv-Fhb">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Aqs-QK-Ups">
                             <view key="customView" contentMode="scaleToFill" id="p0q-Fg-3Ba">
-                                <rect key="frame" x="16" y="1" width="83" height="42"/>
+                                <rect key="frame" x="16" y="7" width="83" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                         </barButtonItem>
@@ -928,7 +928,7 @@ World</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IXk-qg-mFJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9sB-f3-Fnk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1070,7 +1070,7 @@ World</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qo4-72-Hmr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="mcx-oR-qPe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1084,7 +1084,7 @@ World</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qd6-ba-dIo"/>
+        <segue reference="de9-NH-aec"/>
         <segue reference="cnd-KK-o60"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Primary"/>
@@ -1095,13 +1095,13 @@ World</string>
         <image name="News" width="19" height="20"/>
         <image name="Settings" width="20" height="20"/>
         <namedColor name="Background">
-            <color red="0.6431" green="0.0196" blue="0.9804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BlurTint">
-            <color red="1" green="1" blue="1" alpha="0.3" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Primary">
-            <color red="0.6431" green="0.0196" blue="0.9804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.64313725490196083" green="0.019607843137254902" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

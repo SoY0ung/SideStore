@@ -21,6 +21,9 @@
 		19B9B7452845E6DF0076EF69 /* SelectTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */; };
 		4879A95F2861046500FC1BBD /* AltSign in Frameworks */ = {isa = PBXBuildFile; productRef = 4879A95E2861046500FC1BBD /* AltSign */; };
 		4879A9622861049C00FC1BBD /* OpenSSL in Frameworks */ = {isa = PBXBuildFile; productRef = 4879A9612861049C00FC1BBD /* OpenSSL */; };
+		6EA263632965D79100A5A57F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EA263652965D79100A5A57F /* Localizable.strings */; };
+		6EA263662965D98800A5A57F /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA263682965D98800A5A57F /* Authentication.storyboard */; };
+		6EA2636B2965DA3300A5A57F /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2636D2965DA3300A5A57F /* Settings.storyboard */; };
 		B3146ED2284F581E00BBC3FD /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3146ECD284F580500BBC3FD /* Roxas.framework */; };
 		B3146ED3284F581E00BBC3FD /* Roxas.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3146ECD284F580500BBC3FD /* Roxas.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B33FFBA8295F8E98002259E6 /* libfragmentzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B343F894295F7F9B002B1159 /* libfragmentzip.a */; };
@@ -287,12 +290,10 @@
 		BFE00A202503097F00EB4D0C /* INInteraction+AltStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE00A1F2503097F00EB4D0C /* INInteraction+AltStore.swift */; };
 		BFE338DF22F0EADB002E24B9 /* FetchSourceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE338DE22F0EADB002E24B9 /* FetchSourceOperation.swift */; };
 		BFE338E822F10E56002E24B9 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE338E722F10E56002E24B9 /* LaunchViewController.swift */; };
-		BFE60738231ADF49002B0E8E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE60737231ADF49002B0E8E /* Settings.storyboard */; };
 		BFE6073A231ADF82002B0E8E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE60739231ADF82002B0E8E /* SettingsViewController.swift */; };
 		BFE6073C231AE1E7002B0E8E /* SettingsHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE6073B231AE1E7002B0E8E /* SettingsHeaderFooterView.xib */; };
 		BFE60740231AFD2A002B0E8E /* InsetGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6073F231AFD2A002B0E8E /* InsetGroupTableViewCell.swift */; };
 		BFE60742231B07E6002B0E8E /* SettingsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE60741231B07E6002B0E8E /* SettingsHeaderFooterView.swift */; };
-		BFE6325A22A83BEB00F30809 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE6325922A83BEB00F30809 /* Authentication.storyboard */; };
 		BFE6326C22A86FF300F30809 /* AuthenticationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6326B22A86FF300F30809 /* AuthenticationOperation.swift */; };
 		BFECAC8824FD950E0077C41F /* CodableServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD44605241188C300EAB90A /* CodableServerError.swift */; };
 		BFECAC8924FD950E0077C41F /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18BFF22485828200DD5981 /* ConnectionManager.swift */; };
@@ -490,6 +491,12 @@
 		191E5FD7290A6EFB001A3B7C /* minimuxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = minimuxer.h; path = ../Dependencies/minimuxer/minimuxer.h; sourceTree = "<group>"; };
 		1920B04E2924AC8300744F60 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamViewController.swift; sourceTree = "<group>"; };
+		6EA263602965D5BE00A5A57F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		6EA263642965D79100A5A57F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6EA263672965D98800A5A57F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
+		6EA2636A2965D98D00A5A57F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Authentication.strings"; sourceTree = "<group>"; };
+		6EA2636C2965DA3300A5A57F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		6EA2636F2965DA3800A5A57F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Settings.strings"; sourceTree = "<group>"; };
 		B3146EC6284F580500BBC3FD /* Roxas.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Roxas.xcodeproj; path = Dependencies/Roxas/Roxas.xcodeproj; sourceTree = "<group>"; };
 		B33FFBA9295F8F78002259E6 /* preboard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = preboard.c; path = src/preboard.c; sourceTree = "<group>"; };
 		B33FFBAB295F8F98002259E6 /* companion_proxy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = companion_proxy.c; path = src/companion_proxy.c; sourceTree = "<group>"; };
@@ -777,12 +784,10 @@
 		BFE00A1F2503097F00EB4D0C /* INInteraction+AltStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "INInteraction+AltStore.swift"; sourceTree = "<group>"; };
 		BFE338DE22F0EADB002E24B9 /* FetchSourceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSourceOperation.swift; sourceTree = "<group>"; };
 		BFE338E722F10E56002E24B9 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		BFE60737231ADF49002B0E8E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BFE60739231ADF82002B0E8E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BFE6073B231AE1E7002B0E8E /* SettingsHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsHeaderFooterView.xib; sourceTree = "<group>"; };
 		BFE6073F231AFD2A002B0E8E /* InsetGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupTableViewCell.swift; sourceTree = "<group>"; };
 		BFE60741231B07E6002B0E8E /* SettingsHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderFooterView.swift; sourceTree = "<group>"; };
-		BFE6325922A83BEB00F30809 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		BFE6326B22A86FF300F30809 /* AuthenticationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationOperation.swift; sourceTree = "<group>"; };
 		BFF00D2F2501BD7D00746320 /* Intents.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		BFF00D312501BDA100746320 /* BackgroundRefreshAppsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundRefreshAppsOperation.swift; sourceTree = "<group>"; };
@@ -1529,6 +1534,7 @@
 				BF6C8FA8242935CA00125131 /* Dependencies */,
 				BFD247972284D7D800981D42 /* Supporting Files */,
 				1920B04E2924AC8300744F60 /* Settings.bundle */,
+				6EA263652965D79100A5A57F /* Localizable.strings */,
 			);
 			path = AltStore;
 			sourceTree = "<group>";
@@ -1612,7 +1618,7 @@
 		BFDB69FB22A9A7A6007EA6D6 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				BFE60737231ADF49002B0E8E /* Settings.storyboard */,
+				6EA2636D2965DA3300A5A57F /* Settings.storyboard */,
 				BFE60739231ADF82002B0E8E /* SettingsViewController.swift */,
 				BFE6073F231AFD2A002B0E8E /* InsetGroupTableViewCell.swift */,
 				BFE60741231B07E6002B0E8E /* SettingsHeaderFooterView.swift */,
@@ -1662,7 +1668,7 @@
 		BFE6325822A83BA800F30809 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				BFE6325922A83BEB00F30809 /* Authentication.storyboard */,
+				6EA263682965D98800A5A57F /* Authentication.storyboard */,
 				BFF0B6932321CB85007A79E1 /* AuthenticationViewController.swift */,
 				BFF0B6972322CAB8007A79E1 /* InstructionsViewController.swift */,
 				BF6F439123644C6E00A0B879 /* RefreshAltStoreViewController.swift */,
@@ -1994,6 +2000,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = BFD247612284B9A500981D42;
 			packageReferences = (
@@ -2134,9 +2141,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA263632965D79100A5A57F /* Localizable.strings in Resources */,
 				BFC57A702416FC7600EB891E /* InstalledAppsCollectionHeaderView.xib in Resources */,
 				BFB4323F22DE852000B7F8BC /* UpdateCollectionViewCell.xib in Resources */,
-				BFE60738231ADF49002B0E8E /* Settings.storyboard in Resources */,
+				6EA2636B2965DA3300A5A57F /* Settings.storyboard in Resources */,
 				D57DF638271E32F000677701 /* PatchApp.storyboard in Resources */,
 				BFD2477A2284B9A700981D42 /* LaunchScreen.storyboard in Resources */,
 				BF44EEF3246B3A17002A52F2 /* AltBackup.ipa in Resources */,
@@ -2149,7 +2157,7 @@
 				BFDB5B2622EFBBEA00F74113 /* BrowseCollectionViewCell.xib in Resources */,
 				BFE6073C231AE1E7002B0E8E /* SettingsHeaderFooterView.xib in Resources */,
 				BF29012F2318F6B100D88A45 /* AppBannerView.xib in Resources */,
-				BFE6325A22A83BEB00F30809 /* Authentication.storyboard in Resources */,
+				6EA263662965D98800A5A57F /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2486,6 +2494,32 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6EA263652965D79100A5A57F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EA263642965D79100A5A57F /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6EA263682965D98800A5A57F /* Authentication.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EA263672965D98800A5A57F /* Base */,
+				6EA2636A2965D98D00A5A57F /* zh-Hans */,
+			);
+			name = Authentication.storyboard;
+			sourceTree = "<group>";
+		};
+		6EA2636D2965DA3300A5A57F /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EA2636C2965DA3300A5A57F /* Base */,
+				6EA2636F2965DA3800A5A57F /* zh-Hans */,
+			);
+			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
 		BF580488246A28F9008AE704 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2498,6 +2532,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFD247742284B9A500981D42 /* Base */,
+				6EA263602965D5BE00A5A57F /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -2901,6 +2936,7 @@
 			baseConfigurationReference = B3C39607284F4C8400DA9E2F /* Build.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2969,6 +3005,7 @@
 			baseConfigurationReference = B3C39607284F4C8400DA9E2F /* Build.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
