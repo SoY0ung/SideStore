@@ -55,7 +55,7 @@ public extension Bundle
 
 public extension Bundle
 {
-    static var baseAltStoreAppGroupID = "group.com.TestCN.SideStore"
+    static var baseAltStoreAppGroupID = "group.com.SideStore.SideStore"
     
     var appGroups: [String] {
         return self.infoDictionary?[Bundle.Info.appGroups] as? [String] ?? []

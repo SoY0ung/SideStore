@@ -70,9 +70,15 @@ class LaunchViewController: RSTLaunchViewController, UIDocumentPickerDelegate
             let contents = String(data: data, encoding: .utf8),
             !contents.isEmpty  {
             print("Loaded ALTPairingFile from \(appResourcePath.path)")
+            //Save to ./Document
+            let documentsPath = fm.documentsDirectory.appendingPathComponent("/\(filename)")
+            try! contents.write(to: documentsPath, atomically: true, encoding: String.Encoding.utf8)
             return contents
         } else if let plistString = Bundle.main.object(forInfoDictionaryKey: "ALTPairingFile") as? String, !plistString.isEmpty, !plistString.contains("insert pairing file here"){
             print("Loaded ALTPairingFile from Info.plist")
+            //Save to ./Document
+            let documentsPath = fm.documentsDirectory.appendingPathComponent("/\(filename)")
+            try! plistString.write(to: documentsPath, atomically: true, encoding: String.Encoding.utf8)
             return plistString
         } else {
             // Show an alert explaining the pairing file

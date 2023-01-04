@@ -48,9 +48,9 @@ class TabBarController: UITabBarController
         
         let pairingPlist = try? PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil) as? [String: Any]
         let udid = (pairingPlist?["UDID"] as? String) ?? "Not Found"
-        let toastView = ToastView(text: "Pairing File Loaded", detailText: "UDID: \(udid)")
+        let toastView = ToastView(text: "Device UDID", detailText: udid)
         toastView.textLabel.textAlignment = .center
-        toastView.preferredDuration = 3.0
+        toastView.detailTextLabel.textAlignment = .center
         toastView.show(in: self)
         
         if let (identifier, sender) = self.initialSegue
