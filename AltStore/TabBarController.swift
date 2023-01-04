@@ -48,7 +48,7 @@ class TabBarController: UITabBarController
         
         let pairingPlist = try? PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil) as? [String: Any]
         let udid = (pairingPlist?["UDID"] as? String) ?? "Not Found"
-        let toastView = ToastView(text: "Device UDID", detailText: udid)
+        let toastView = ToastView(text: NSLocalizedString("Found UDID", comment: ""), detailText: udid)
         toastView.textLabel.textAlignment = .center
         toastView.detailTextLabel.textAlignment = .center
         toastView.show(in: self.view, duration: 3.0)
