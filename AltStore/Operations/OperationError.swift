@@ -142,6 +142,16 @@ extension MinimuxerError: LocalizedError {
             return NSLocalizedString("Unable to manage profiles on the device", comment: "")
         case .ProfileRemove:
             return NSLocalizedString("Unable to manage profiles on the device", comment: "")
+            
+        case .LockdownClient:
+            return NSLocalizedString("Unable to start lockdown client", comment: "")
+        case .StartLocService:
+            return NSLocalizedString("Unable to start simulatelocation service. Make sure a developer disk image is mounted!", comment: "")
+        case .ConnectLocService:
+            return NSLocalizedString("Unable to connect simulatelocation service", comment: "")
+        case .SendLocData:
+            return NSLocalizedString("Unable to send location data", comment: "")
+
         }
     }
     
