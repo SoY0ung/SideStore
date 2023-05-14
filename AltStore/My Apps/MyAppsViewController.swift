@@ -998,6 +998,94 @@ private extension MyAppsViewController
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    @IBAction func simulateLocation(_ sender: UIBarButtonItem)
+    {
+        let alertController = UIAlertController(title: "输入要定位的坐标", message: "坐标请输入小数，并注意正负号。如需恢复定位，请重启您的设备。", preferredStyle: .alert)
+
+        alertController.addTextField { textField in
+            textField.placeholder = "请输入纬度（如37.7749）"
+            textField.keyboardType = .decimalPad
+        }
+
+        alertController.addTextField { textField in
+            textField.placeholder = "请输入经度（如-122.4194）"
+            textField.keyboardType = .decimalPad
+        }
+
+        let quickFillAction = UIAlertAction(title: "定位到美国旧金山", style: .default) { _ in
+            let latitude = 37.7749
+            let longitude = -122.4194
+            AppManager.shared.simulatLocation(latitude: latitude, longitude: longitude, isReset: false) { result in
+                DispatchQueue.main.async {
+                    switch result
+                    {
+                    case .success:
+                        let toastView = ToastView(text: "定位成功！", detailText: nil)
+                        toastView.show(in: self)
+                    case .failure(let error):
+                        let toastView = ToastView(error: error)
+                        toastView.show(in: self)
+                    }
+                }
+            }
+        }
+        
+        let quickFillAction2 = UIAlertAction(title: "定位到中国北京", style: .default) { _ in
+            let latitude = 39.9042
+            let longitude = 116.4074
+            AppManager.shared.simulatLocation(latitude: latitude, longitude: longitude, isReset: false) { result in
+                DispatchQueue.main.async {
+                    switch result
+                    {
+                    case .success:
+                        let toastView = ToastView(text: "定位成功！", detailText: nil)
+                        toastView.show(in: self)
+                    case .failure(let error):
+                        let toastView = ToastView(error: error)
+                        toastView.show(in: self)
+                    }
+                }
+            }
+        }
+
+        let confirmAction = UIAlertAction(title: "开始定位", style: .destructive) { _ in
+            guard let latitudeText = alertController.textFields?[0].text,
+                  let latitude = Double(latitudeText),
+                  latitude.truncatingRemainder(dividingBy: 1) != 0,
+                  let longitudeText = alertController.textFields?[1].text,
+                  let longitude = Double(longitudeText),
+                  longitude.truncatingRemainder(dividingBy: 1) != 0
+            else {
+                let toastView = ToastView(text: "请输入正确的纬度和经度！", detailText: nil)
+                toastView.show(in: self)
+                return
+            }
+            
+            AppManager.shared.simulatLocation(latitude: latitude, longitude: longitude, isReset: false) { result in
+                DispatchQueue.main.async {
+                    switch result
+                    {
+                    case .success:
+                        let toastView = ToastView(text: "定位成功！", detailText: nil)
+                        toastView.show(in: self)
+                    case .failure(let error):
+                        let toastView = ToastView(error: error)
+                        toastView.show(in: self)
+                    }
+                }
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+        alertController.addAction(quickFillAction)
+        alertController.addAction(quickFillAction2)
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
 }
 
 private extension MyAppsViewController
