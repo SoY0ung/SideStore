@@ -682,6 +682,30 @@ extension AppManager
         self.run([enableJITOperation], context: context, requiresSerialQueue: true)
     }
     
+    @available(iOS 14, *)
+    func simulatLocation(latitude lat: Double, longitude lon: Double, isReset resetFlag: Bool, completionHandler: @escaping (Result<Void, Error>) -> Void)
+    {
+        final class Context: OperationContext, SimulateLocationContext
+        {
+            var latitude: String?
+            var longitude: String?
+            var mode: Int32?
+        }
+        
+        let context = Context()
+        context.latitude = String(lat)
+        context.longitude = String(lon)
+        context.mode = resetFlag ? 1 : 0
+        
+        
+        let simulateLocationOperation = SimulateLocationOperation(context: context)
+        simulateLocationOperation.resultHandler = { (result) in
+            completionHandler(result)
+        }
+        
+        self.run([simulateLocationOperation], context: context, requiresSerialQueue: true)
+    }
+    
     @available(iOS 14.0, *)
     func patch(resignedApp: ALTApplication, presentingViewController: UIViewController, context authContext: AuthenticatedOperationContext, completionHandler: @escaping (Result<InstalledApp, Error>) -> Void) -> PatchAppOperation
     {

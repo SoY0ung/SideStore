@@ -17,7 +17,7 @@ protocol SimulateLocationContext
 {
     var latitude: String? { get }
     var longitude: String? { get }
-    var mode: Int? { get }
+    var mode: Int32? { get }
 
     var error: Error? { get }
 }
@@ -36,6 +36,21 @@ final class SimulateLocationOperation<Context: SimulateLocationContext>: ResultO
     {
         super.main()
         
+        if let error = self.context.error
+        {
+            self.finish(.failure(error))
+            return
+        }
 
+        guard let lat = self.context.latitude, let lon = self.context.longitude, let mode = self.context.mode else { return self.finish(.failure(OperationError.invalidParameters)) }
+        
+        do {
+            try set_location(lat, lon, mode)
+        } catch {
+            return self.finish(.failure(error))
+        }
+        
+        self.finish(.success(()))
+        
     }
 }
