@@ -13,6 +13,8 @@ check_for_update() {
         echo "0,none" > ".last-prebuilt-fetch-$1"
     fi
 
+    echo "-------: $1"
+
     LAST_FETCH=`cat .last-prebuilt-fetch-$1 | perl -n -e '/([0-9]*),([^ ]*)$/ && print $1'`
     LAST_COMMIT=`cat .last-prebuilt-fetch-$1 | perl -n -e '/([0-9]*),([^ ]*)$/ && print $2'`
 
@@ -20,21 +22,26 @@ check_for_update() {
     if [[ $LAST_FETCH -lt $(expr $(date +%s) - 3600) ]] || [[ "$2" == "force" ]]; then
         echo "Checking $1 for update"
         echo
-        LATEST_COMMIT=`curl https://api.github.com/repos/SideStore/$1/releases/latest | perl -n -e '/Commit: https:\\/\\/github\\.com\\/[^\\/]*\\/[^\\/]*\\/commit\\/([^"]*)/ && print $1'`
+        if [ "$1" = "minimuxer" ]; then
+            LATEST_COMMIT=`curl https://api.github.com/repos/SoY0ung/$1/releases/latest | perl -n -e '/Commit: https:\\/\\/github\\.com\\/[^\\/]*\\/[^\\/]*\\/commit\\/([^"]*)/ && print $1'`
+        else 
+            LATEST_COMMIT=`curl https://api.github.com/repos/SideStore/$1/releases/latest | perl -n -e '/Commit: https:\\/\\/github\\.com\\/[^\\/]*\\/[^\\/]*\\/commit\\/([^"]*)/ && print $1'`            
+        fi
         echo
         echo "Last commit: $LAST_COMMIT"
         echo "Latest commit: $LATEST_COMMIT"
         if [[ "$LAST_COMMIT" != "$LATEST_COMMIT" ]]; then
             echo "Found update, downloading binaries"
             echo
-            wget -O "$1/lib$1-sim.a" "https://github.com/SideStore/$1/releases/latest/download/lib$1-sim.a"
             if [[ "$1" != "minimuxer" ]]; then
                 wget -O "$1/lib$1.a" "https://github.com/SideStore/$1/releases/latest/download/lib$1.a"
                 wget -O "$1/$1.h" "https://github.com/SideStore/$1/releases/latest/download/$1.h"
+                wget -O "$1/lib$1-sim.a" "https://github.com/SideStore/$1/releases/latest/download/lib$1-sim.a"
                 echo
             else
-                wget -O "$1/lib$1-ios.a" "https://github.com/SideStore/$1/releases/latest/download/lib$1-ios.a"
-                wget -O "$1/generated.zip" "https://github.com/SideStore/$1/releases/latest/download/generated.zip"
+                wget -O "$1/generated.zip" "https://github.com/SoY0ung/$1/releases/latest/download/generated.zip"
+                wget -O "$1/lib$1-ios.a" "https://github.com/SoY0ung/$1/releases/latest/download/lib$1-ios.a"
+                wget -O "$1/lib$1-sim.a" "https://github.com/SoY0ung/$1/releases/latest/download/lib$1-sim.a"
                 echo
                 echo "Unzipping generated.zip"
                 cd "$1"
